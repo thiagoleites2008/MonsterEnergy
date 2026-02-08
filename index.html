@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div class="content">
+
+        <nav>
+            
+            <div class="links">
+                <ul>
+                <li><a href="index.html">Registar</a></li>
+                <li><a href="registros.html">Registros</a></li>
+                <li><a href="estadisticas.html">Estadisticas</a></li>
+            </ul>
+            </div>
+
+                <div class="hamburguesa" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+    </div>
+            
+        </nav>
+
+        <div class="form-all">
+
+            <img src="imgs/monachina.png" alt="" class="img1">
+
+            <div id = "formulario">
+            
+                <div class="registro">
+
+                        <h2>Registrar Monster</h2>
+
+                        <div class="form">
+                                <label>Fecha</label>
+                                <input id="fecha" type="date">
+                                <label>Monster Edicion</label>
+                                <select id="edicion" onchange="mostrarOtroCampo()">
+                                    <button>
+                                        <selectedcontent>Selecciona una edición</selectedcontent>
+                                    </button>
+                                    <option value="">Selecciona una edición</option>
+                                    <option value="Original Green">Original</option>
+                                    <option value="Ultra White">Ultra White</option>
+                                    <option value="Ultra Blue">Ultra Blue</option>
+                                    <option value="Ultra Red">Ultra Red</option>
+                                    <option value="Ultra Paradise">Ultra Paradise</option>
+                                    <option value="Ultra Sunrise">Ultra Sunrise</option>
+                                    <option value="Pipeline Punch">Pipeline Punch</option>
+                                    <option value="Mango Loco">Mango Loco</option>
+                                    <option value="Otra">Otra (especificar)</option>
+                                </select>
+
+                            <input type="text" placeholder="Especificar edición..." id="otraE" style="display: none;">
+                                        <label>Cantidad de ml</label>
+                            <input type="number" placeholder="Ingrese la cantidad en ml..." id="cantidadml">
+                            <label>Precio</label>
+                            <input type="number" placeholder="Ingrese el precio..." id="precio">
+                            <label>Lugar</label>
+                            <input type="text" placeholder="Ingrese el lugar..." id="lugar">
+                    </div>
+
+                </div>
+
+                <div class="boton" id="enviar">
+                    <p>Registrar</p>
+                </div>
+
+             </div>
+
+        </div>
+
+        <div class="mensajes">
+            <div class="mensaje-correcto">
+
+                <p>Se registro correctamente</p>
+
+            </div>
+
+            <div class="mensaje-error">
+
+                <p>Ocurrió un error, intente de nuevo</p>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="indexLogica.js"></script>
+</body>
+</html>

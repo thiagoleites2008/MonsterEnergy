@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de registros</title>
+    <link rel="stylesheet" href="registrosstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <nav>
+            
+        <div class="links">
+            <ul>
+            <li><a href="index.html">Registar</a></li>
+            <li><a href="registros.html">Registros</a></li>
+            <li><a href="estadisticas.html">Estadisticas</a></li>
+        </ul>
+        </div>
+        
+    </nav>
+
+    <div class="bloques">
+
+        <div class="bloque1" onclick="eliminarTodosRegistros()">
+            <p>Eliminar todo</p>
+        </div>
+
+        <div class="bloque2">
+            
+            <h2>Historial de registros</h2>
+
+            <div class="texto" id="sinRegistros">
+                <p class="sinoHayNada"> NO HAY REGISTROS TODAVÍA</p>
+                <p class="sinoHayNada">TOMA UNA DELOCIOSA MONSTER, LA BLANCA PREFERENTEMENTE, Y REGISTALA</p>
+            </div>
+
+            <div id="contenedor-registros"></div>
+            
+
+        </div>
+
+    </div>
+
+    <script src="registrosLogica.js"></script>
+
+</body>
+</html>
