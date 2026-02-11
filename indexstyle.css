@@ -25,7 +25,7 @@ ul {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    gap: 50px;
+    gap: 100px;
     justify-content: center;
 }
 
@@ -46,7 +46,7 @@ ul li a:hover {
 }
 
 ul li {
-    margin: 30px 10px;
+    margin: 30px;
 }
 
 .links {
@@ -63,10 +63,9 @@ img {
     background-color: #0b0b0b;
     border-radius: 50px;
     border: #95d600 6px solid;
-    width: 90%;
-    max-width: 800px;
+    width: 800px;
     height: auto;
-    margin: 100px auto 40px;
+    margin: 400px auto 0;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -75,14 +74,14 @@ img {
     color: #95d600;
     text-align: center;
     padding-top: 20px;
-    font-size: clamp(30px, 6vw, 50px);
+    font-size: 50px;
     font-family: "Lilita One", sans-serif;
     letter-spacing: 3px;
 }
 
 .form label {
     color: white;
-    font-size: clamp(20px, 4vw, 30px);
+    font-size: 30px;
     font-family: "Lilita One", sans-serif;
     letter-spacing: 2px;
     text-align: center;
@@ -103,8 +102,7 @@ select, ::picker(select) {
 }
 
 .form input, .form select {
-    width: 90%;
-    max-width: 400px;
+    width: 400px;
     height: 40px;
     font-size: 20px;
     border-radius: 10px;
@@ -145,8 +143,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .form select {
-    width: 90%;
-    max-width: 420px;
+    width: 420px;
     height: 48px;
 }
 
@@ -226,10 +223,9 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .img1 {
     position: absolute;
     top: 250px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 600px;
+    right: auto;
     pointer-events: none;
-    display: none;
 }
 
 .form-all {
@@ -242,8 +238,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     background-color: #0b0b0b;
     border-radius: 50px;
     border: #95d600 6px solid;
-    width: 90%;
-    max-width: 800px;
+    width: 800px;
     height: auto;
     margin-top: 40px;
     font-family: "Lilita One", sans-serif;
@@ -258,7 +253,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .boton p {
     text-align: center;
-    font-size: clamp(25px, 5vw, 40px);
+    font-size: 40px;
     margin: 25px;
 }
 
@@ -269,14 +264,14 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .mensaje-correcto p, .mensaje-error p {
     color: white;
-    font-size: clamp(18px, 4vw, 25px);
+    font-size: 25px;
     text-align: center;
     margin: 20px;
     font-family: "Lilita One", sans-serif;
     letter-spacing: 2px;
-    position: relative;
-    left: 0;
-    transform: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: none;
 }
 
@@ -289,7 +284,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 
 .mensajes {
-    margin-bottom: 100px;
+    margin-bottom: 300px;
 }
 
 .hamburguesa {
@@ -356,11 +351,57 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     flex-wrap: wrap;
 }
 
-/* Media queries para tablets y celulares */
+
+@media (max-width: 900px) {
+    .registro {
+        width: 90%;
+        max-width: 800px;
+        margin: 100px auto 0;
+    }
+    
+    .boton {
+        width: 90%;
+        max-width: 800px;
+    }
+    
+    .form input, .form select {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .form select {
+        max-width: 420px;
+    }
+    
+    ul {
+        gap: 50px;
+    }
+    
+    .img1 {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .registro {
-        margin: 50px auto 40px;
+        margin: 50px auto 0;
         width: 95%;
+    }
+    
+    .boton {
+        width: 95%;
+    }
+    
+    .registro h2 {
+        font-size: clamp(30px, 6vw, 50px);
+    }
+    
+    .form label {
+        font-size: clamp(20px, 4vw, 30px);
+    }
+    
+    .boton p {
+        font-size: clamp(25px, 5vw, 40px);
     }
     
     ul {
@@ -368,7 +409,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     }
     
     ul li {
-        margin: 20px 5px;
+        margin: 20px 10px;
     }
     
     ul li a {
@@ -382,8 +423,15 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
         padding-bottom: 40px;
     }
     
-    .img1 {
-        display: none !important;
+    .mensaje-correcto p, .mensaje-error p {
+        font-size: clamp(18px, 4vw, 25px);
+        position: relative;
+        left: 0;
+        transform: none;
+    }
+    
+    .mensajes {
+        margin-bottom: 100px;
     }
 }
 
@@ -396,6 +444,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
         border-radius: 30px;
         border-width: 4px;
         padding: 15px;
+        width: 95%;
+    }
+    
+    .boton {
+        width: 95%;
+        border-width: 4px;
+        border-radius: 30px;
     }
     
     .form input, .form select {
@@ -403,8 +458,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
         height: 35px;
     }
     
-    .boton {
-        border-width: 4px;
-        border-radius: 30px;
+    ul li a {
+        font-size: 20px;
     }
 }
