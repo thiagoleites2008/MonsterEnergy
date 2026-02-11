@@ -3,7 +3,6 @@ body {
     padding: 0;
     background: linear-gradient(to right, #0b0b0b 40%, #111f11);
     background-size: cover;
-    
 }
 
 * {
@@ -11,20 +10,23 @@ body {
     font-family: "Lilita One", sans-serif;
 }
 
-
 nav {
     background-color: #0b0b0b;
     border-bottom: #95d600 6px solid;
     display: flex;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
 }
 
 ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    gap: 100px;
+    gap: 50px;
+    justify-content: center;
 }
 
 ul li a {
@@ -44,7 +46,7 @@ ul li a:hover {
 }
 
 ul li {
-    margin: 30px;
+    margin: 30px 10px;
 }
 
 .links {
@@ -53,32 +55,37 @@ ul li {
 
 img {
     width: 290px;
+    max-width: 90%;
+    height: auto;
 }
 
 .registro {
     background-color: #0b0b0b;
-    border-radius: 50PX;
+    border-radius: 50px;
     border: #95d600 6px solid;
-    width: 800px;
+    width: 90%;
+    max-width: 800px;
     height: auto;
-    margin: auto;
-    margin-top: 400px;
+    margin: 100px auto 40px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .registro h2 {
     color: #95d600;
     text-align: center;
     padding-top: 20px;
-    font-size: 50px;
+    font-size: clamp(30px, 6vw, 50px);
     font-family: "Lilita One", sans-serif;
     letter-spacing: 3px;
 }
 
 .form label {
     color: white;
-    font-size: 30px;
+    font-size: clamp(20px, 4vw, 30px);
     font-family: "Lilita One", sans-serif;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .form {
@@ -96,7 +103,8 @@ select, ::picker(select) {
 }
 
 .form input, .form select {
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     height: 40px;
     font-size: 20px;
     border-radius: 10px;
@@ -105,6 +113,7 @@ select, ::picker(select) {
     background-color: #0b0b0b;
     color: white;
     transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .form input:hover, .form select:hover {
@@ -136,7 +145,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .form select {
-    width: 420px;
+    width: 90%;
+    max-width: 420px;
     height: 48px;
 }
 
@@ -167,19 +177,17 @@ option {
 option:hover {
     background-color: #95d600;
     color: black;
-    
 }
 
 ::picker-icon {
     display: flex;
     align-items: center;
-    margin-right: 6spx;
+    margin-right: 6px;
     transition: 0.5s;
 }
 
 :open::picker-icon {
     transform: rotate(180deg);
-
 }
 
 option:checked {
@@ -218,9 +226,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .img1 {
     position: absolute;
     top: 250px;
-    left: 600px;
-    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
     pointer-events: none;
+    display: none;
 }
 
 .form-all {
@@ -231,9 +240,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .boton {
     background-color: #0b0b0b;
-    border-radius: 50PX;
+    border-radius: 50px;
     border: #95d600 6px solid;
-    width: 800px;
+    width: 90%;
+    max-width: 800px;
     height: auto;
     margin-top: 40px;
     font-family: "Lilita One", sans-serif;
@@ -248,7 +258,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .boton p {
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(25px, 5vw, 40px);
     margin: 25px;
 }
 
@@ -259,14 +269,14 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .mensaje-correcto p, .mensaje-error p {
     color: white;
-    font-size: 25px;
+    font-size: clamp(18px, 4vw, 25px);
     text-align: center;
     margin: 20px;
     font-family: "Lilita One", sans-serif;
     letter-spacing: 2px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    left: 0;
+    transform: none;
     display: none;
 }
 
@@ -279,7 +289,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 
 .mensajes {
-        margin-bottom: 300px;
+    margin-bottom: 100px;
 }
 
 .hamburguesa {
@@ -342,17 +352,59 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     color: black;
 }
 
-/* Solo en móvil */
+.content {
+    flex-wrap: wrap;
+}
+
+/* Media queries para tablets y celulares */
 @media (max-width: 768px) {
-    .links {
-        display: none;
+    .registro {
+        margin: 50px auto 40px;
+        width: 95%;
     }
     
-    .hamburguesa {
-        display: flex;
+    ul {
+        gap: 20px;
     }
     
-    .menu-mobile {
-        display: flex;
+    ul li {
+        margin: 20px 5px;
+    }
+    
+    ul li a {
+        font-size: 24px;
+        padding: 8px 15px;
+    }
+    
+    .form {
+        gap: 20px;
+        margin-top: 30px;
+        padding-bottom: 40px;
+    }
+    
+    .img1 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+    
+    .registro {
+        border-radius: 30px;
+        border-width: 4px;
+        padding: 15px;
+    }
+    
+    .form input, .form select {
+        font-size: 16px;
+        height: 35px;
+    }
+    
+    .boton {
+        border-width: 4px;
+        border-radius: 30px;
     }
 }
