@@ -446,6 +446,18 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
         padding: 15px;
         width: 95%;
     }
+
+    .registro h2 {
+        font-size: 30px;
+    }
+
+    .registro label {
+        font-size: 18px;
+    }
+
+    .registro input, .registro select {
+        font-size: 14px;
+    }
     
     .boton {
         width: 95%;
