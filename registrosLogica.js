@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     function crearRegistroHTML(registro) {
         const div = document.createElement('div');
-        div.className = 'registro-item'; // ← Cambio: era 'registro'
+        div.className = 'registro-item';
         
         div.innerHTML = `
             <div class="registro-header">

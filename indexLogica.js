@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // 3. Validar números positivos
-        if (precio <= 0 || cantidad <= 0) {
+        if (precio < 0 || cantidad <= 0) {
             mostrarMensaje('error');
             return;
         }
