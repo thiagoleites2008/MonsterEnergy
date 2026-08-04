@@ -1,0 +1,45 @@
+.stat-card{
+    border: 3px solid var(--verde);
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    background-color: var(--negro);
+}
+
+.stat-card p {
+    font-size: 20px;
+}
+
+.contenedor-ano{
+    padding: 100px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.fila-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.fila-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cosa{
+    background-color: var(--negro);
+    border: 3px solid var(--verde);
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    padding: 40px 0px;
+}
+
+.cosas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
