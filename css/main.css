@@ -1,0 +1,70 @@
+:root {
+    /* Verdes */
+    --verde: #95d600;
+    --verde-claro: #b8ff00;
+
+    /* Negros */
+    --negro: #0b0b0b;
+    --negro-verdoso: #111f11;
+    --negro-secundario: #1a1a1a;
+
+    /* Rojos (errores, eliminar) */
+    --rojo: #ff3333;
+    --rojo-oscuro: #cc0000;
+
+    /* Grises (estados disabled) */
+    --gris-disabled-bg: #333;
+    --gris-disabled-texto: #666;
+}
+
+/* Nav (compartida por todas las páginas) */
+nav {
+    background-color: var(--negro);
+    border-bottom: var(--verde) 6px solid;
+    display: flex;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, var(--negro) 40%, var(--negro-verdoso));
+    background-size: cover;
+}
+
+* {
+    scrollbar-color: var(--verde) black;
+    font-family: "Lilita One", sans-serif;
+    letter-spacing: 2px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 100px;
+}
+
+ul li {
+    margin: 30px;
+}
+
+ul li a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-family: "Lilita One", sans-serif;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+ul li a:hover {
+    color: black;
+    background-color: var(--verde);
+}
+
+.links {
+    margin: auto;
+}
